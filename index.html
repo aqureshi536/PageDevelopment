@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="module">
+<head>
+	<noscript>Please check your javascript</noscript>
+	<meta charset="UTF-8">
+	<title>BeOne</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css">
+</head>
+<body>
+
+
+	
+	<div class="container-fluid">
+		<!-- Navbar starts here -->
+		<nav class="navbar navbar-default menubar navbar-fixed-top">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span> 
+				</button>
+				<a  class="navbar-brand" href="#" style="color:black;background-color:#9cc5e1;">BeOne
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav" >
+
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">News <span class="caret"></span></a></li>
+					<li><a href="#">Job Opportunities <span class="caret"></span></a></li>
+				</ul>
+
+			</div>
+		</nav>
+
+		<!-- Navbar ends here -->
+
+
+
+		<div class="content-wrapper" >
+
+			<div class="row">
+
+				<!-- blog starts here -->
+				<div class="col-sm-4" ng-controller="blogCtrl">
+					<p class="home-title">Popular Blogs</p>
+					<hr>
+					<div class="inner-content" ng-repeat="blog in blogs">	
+						<p class="title-blog">{{blog.blogName}}</p>
+						<p>{{blog.blogDescription}}&nbsp;&nbsp; <button class="toggle btn btn-default btn-md" id="buttonBlogToggle{{$index}}" ng-click='toggleBlog($index)'>View</button></p>
+						<p> <b>{{blog.blogComments.length}} Comment/s</b></p>
+
+						<br>
+						<table class="table table-responsive" id="blgTable{{$index}}">				
+							<tbody>
+								<tr ng-repeat="blogComment in blog.blogComments">
+									<td>
+										<p ><img class="card-image img-circle" ng-src="resources/images/{{blogComment.userImage}}.jpg"><span class="card-text">{{blogComment.blogComment}}</span></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>			
+				</div>
+				<!-- blog ends here -->
+
+
+				<div class="col-sm-7 col-sm-offset-1" ng-controller="forumCtrl as forumCon">
+					<p class="home-title">Latest Forums</p>
+					<hr>
+					<div class="inner-content" ng-repeat="forum in forumCon.forums">
+						<p class="title-forum">{{forum.forumName}}</p>
+						<p>{{forum.forumDescription}}&nbsp;&nbsp; <button class="toggle btn btn-default btn-md" id="buttonForumToggle{{$index}}" ng-click='forumCon.toggleForum($index)'>View</button></p>
+						<p> <b>{{forum.forumPosts.length}} Post/s</b></p>				
+						<br>
+						<table class="table" id="frmTable{{$index}}">				
+							<tbody>
+								<tr ng-repeat="forumPost in forum.forumPosts">
+									<td>
+										<p ><img class="card-image img-circle" ng-src="resources/images/{{forumPost.userImage}}.jpg"><span class="card-text">{{forumPost.forumPost}}</span></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+				</div>			
+			</div>
+
+
+		</div>  <!-- row ends here -->
+
+
+	</div><!--Conainer fluid ends here -->
+
+	<!-- Sidebar starts here -->
+
+	<!-- Sidebar ends here -->
+	<script type="text/javascript" src="resources/js/angular.js"></script>
+	<script type="text/javascript" src="resources/js/app.js"></script>
+	<script type="text/javascript" src="resources/js/blogController.js"></script>
+	<script type="text/javascript" src="resources/js/forumController.js"></script>	
+	<script src="resources/js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/js/webapp.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+body{
+	font-family:Tahoma;
+	background-color:#dcedef;
+
+}
+
+.menubar{
+	border-radius: 0px;
+	background-color: #388697;
+	box-shadow: 0px 3px 5px 0px;
+}
+#myNavbar ul li a{
+	color:white;
+	font-weight: 400px;
+	font-size: 18px;
+	transition: font-size .2s, font-color .2s;
+}
+.navbar-brand{
+	font-color:white;
+	font-size: 2em;
+	font-family:Comic Sans MS;
+	background-color:#9cc5e1;
+	cursor: default;
+	border-radius: 0px 5px 5px 0px; 
+}
+
+/* #cc2936 */
+#myNavbar ul li a:hover{
+	color: 	#9cc5e1;
+	font-size:21px;
+
+}
+
+.navbar-toggle{
+	background-color:#9cc5e1;	 
+}
+
+.navbar-toggle:hover{
+	background-color:#9cc5e1;	 
+}
+.content-wrapper{
+	margin:70px 20px 20px 20px;
+	background-color: #cbe4f8;
+	border-radius:5px;	
+	box-shadow: 2px 2px 5px 0px;
+	padding:0px 20px 20px 20px;
+	
+	
+}
+
+@media {
+	
+}
+
+
+.inner-content{
+	margin-top: 10px;
+	background-color: white;
+	padding:15px;
+	box-shadow: 0px 5px 5px 0px;
+	border-radius: 0px;
+}
+.home-title{
+	font-size: 2em;
+}
+.content-title{
+	font-size: 3em;
+}
+
+.title-blog{
+	text-align: center;
+	border-radius: 5px;
+	font-size: 2em;
+	background-color:#55a3f6;
+	box-shadow: 0px  2px 2px 0px;
+}
+
+.title-forum{
+	text-align: center;
+	border-radius: 5px;
+	font-size: 2em;
+	background-color:#ff66ff;
+	box-shadow: 0px  2px 2px 0px;
+}
+.card-image{
+height:70px;
+width: 70px;
+float:left;
+}
+
+/* for text after the image in card */
+.card-text{
+	margin-left:30px;
+	font-family: calibri;
+	font-size: 15px;
+	
+	text-align: right;
+}
+
+table>tbody>tr{
+vertical-align: middle;
+}
+/* .sidebar-back{
+	background-color:red;
+	min-height: 100%;
+	text-align: center;
+	border-radius: 0px 10px 10px 0px;
+	box-shadow: 2px 0px 3px 0px;
+}
+
+.nav-pills-stacked{
+width: 100%;
+}
+.sidebar-ul{
+font-size: 18px;
+} */
