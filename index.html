@@ -6,6 +6,11 @@
 	<title>BeOne</title>
 	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/main.css">
+
+	<script type="text/javascript" src="resources/js/angular.js"></script>
+	<script type="text/javascript" src="resources/js/app.js"></script>
+	<script type="text/javascript" src="resources/js/blogController.js"></script>
+	<script type="text/javascript" src="resources/js/forumController.js"></script>
 </head>
 <body>
 
@@ -20,7 +25,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span> 
 				</button>
-				<a  class="navbar-brand" href="#" style="color:black;background-color:#9cc5e1;">BeOne
+				<a  class="navbar-brand" href="#" >BeOne
 				</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
@@ -49,15 +54,15 @@
 
 				<!-- blog starts here -->
 				<div class="col-sm-4" ng-controller="blogCtrl">
-					<p class="home-title">Popular Blogs</p>
+					<h3 class="ctitle">Popular Blogs</h3>
 					<hr>
 					<div class="inner-content" ng-repeat="blog in blogs">	
-						<p class="title-blog">{{blog.blogName}}</p>
+						<h3 class="">{{blog.blogName}}</h3>
 						<p>{{blog.blogDescription}}&nbsp;&nbsp; <button class="toggle btn btn-default btn-md" id="buttonBlogToggle{{$index}}" ng-click='toggleBlog($index)'>View</button></p>
 						<p> <b>{{blog.blogComments.length}} Comment/s</b></p>
 
 						<br>
-						<table class="table table-responsive" id="blgTable{{$index}}">				
+						<table class="table table-responsive table-toggle" id="blgTable{{$index}}">				
 							<tbody>
 								<tr ng-repeat="blogComment in blog.blogComments">
 									<td>
@@ -72,14 +77,14 @@
 
 
 				<div class="col-sm-7 col-sm-offset-1" ng-controller="forumCtrl as forumCon">
-					<p class="home-title">Latest Forums</p>
+					<h3 class="ctitle">Latest Forums</h3>
 					<hr>
 					<div class="inner-content" ng-repeat="forum in forumCon.forums">
-						<p class="title-forum">{{forum.forumName}}</p>
+						<h3 class="">{{forum.forumName}}</h3>
 						<p>{{forum.forumDescription}}&nbsp;&nbsp; <button class="toggle btn btn-default btn-md" id="buttonForumToggle{{$index}}" ng-click='forumCon.toggleForum($index)'>View</button></p>
 						<p> <b>{{forum.forumPosts.length}} Post/s</b></p>				
 						<br>
-						<table class="table" id="frmTable{{$index}}">				
+						<table class="table table-toggle table-responsive" id="frmTable{{$index}}">				
 							<tbody>
 								<tr ng-repeat="forumPost in forum.forumPosts">
 									<td>
@@ -101,10 +106,7 @@
 	<!-- Sidebar starts here -->
 
 	<!-- Sidebar ends here -->
-	<script type="text/javascript" src="resources/js/angular.js"></script>
-	<script type="text/javascript" src="resources/js/app.js"></script>
-	<script type="text/javascript" src="resources/js/blogController.js"></script>
-	<script type="text/javascript" src="resources/js/forumController.js"></script>	
+		
 	<script src="resources/js/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="resources/js/webapp.js"></script>
